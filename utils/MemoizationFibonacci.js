@@ -16,12 +16,14 @@ let square = (n) => {
   } */
 
 let fib = (n, prevValues = []) => {
-  if (prevValues[n]) return prevValues[n]
+  if (prevValues[n]) return prevValues[n];
   let result;
-  n <= 2 ? result = 1 : result = fib(n - 1, prevValues) + fib(n - 2, prevValues);
+  n <= 2
+    ? (result = 1)
+    : (result = fib(n - 1, prevValues) + fib(n - 2, prevValues));
   prevValues[n] = result;
   return result;
-}
+};
 for (let i = 0; i < 1000; i++) {
   console.log(fib(i));
 }
